@@ -1,7 +1,9 @@
 import string
 
+# Aqui pega o alfabeto em minusculo
 alpha = string.ascii_lowercase      
 
+# Função para criptografar o texto
 def cipher(modo, msg, key):
     text_cipher = ''
     text_decipher = msg.lower()
@@ -15,6 +17,7 @@ def cipher(modo, msg, key):
             text_cipher += ch
     return text_cipher
 
+# Função para descriptografar o texto
 def decipher(modo, msg, key):
     text_decipher = ''
     text_cipher = msg.lower()
@@ -26,6 +29,7 @@ def decipher(modo, msg, key):
             text_decipher += ch
     return text_decipher
 
+#Função para gerar a mensagem criptografada ou descriptografada
 def geraMsgTraduzida(modo, mensagem, chave):
     nova_mensagem = ''
     if modo == 'c' or modo == 'criptografar':
